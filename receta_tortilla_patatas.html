@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tortilla de patatas — receta y técnica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f4f5ee;
+    --ink: #181b2e;
+    --muted: #555b74;
+    --line: #d5d9e4;
+    --blue: #1e3fae;
+    --blue-deep: #14297a;
+    --yolk: #f4c430;
+    --yolk-soft: #fbe9a6;
+    --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+    --text: "Source Serif 4", Charter, "Iowan Old Style", Georgia, serif;
+    --radius: 8px;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 1.125rem/1.62 var(--text); }
+  h1, h2, h3, h4 { font-family: var(--display); line-height: 1.15; margin: 0; }
+  h2 { font-size: 1.6rem; font-weight: 700; letter-spacing: -.02em; }
+  p { margin: 0 0 .8em; }
+  strong { font-weight: 700; }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+
+  /* ---------- Portada ---------- */
+  .hero { background: var(--blue); color: #fff; padding: clamp(32px, 6vw, 68px) 22px 0; overflow: hidden; }
+  .hero .wrap { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 32px; align-items: end; }
+  .hero-copy { padding-bottom: clamp(40px, 7vw, 84px); }
+  .kicker { font-family: var(--display); font-weight: 600; font-size: 1rem; color: var(--yolk); margin: 0 0 14px; }
+  h1 { font-weight: 800; font-size: clamp(3rem, 8.5vw, 6.4rem); line-height: .94; letter-spacing: -.035em; margin: 0 0 22px; }
+  .lede { max-width: 33rem; color: #dce3fb; font-size: 1.2rem; margin: 0 0 22px; }
+  .yield { max-width: 33rem; margin: 0; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.35); font-size: 1.05rem; }
+  .yield strong { font-family: var(--display); font-weight: 700; color: var(--yolk); }
+  .plate { display: block; width: 100%; max-width: 440px; justify-self: end; margin-bottom: -64px; }
+  .tortilla { transform-box: fill-box; transform-origin: center; animation: dar-la-vuelta 1.3s cubic-bezier(.2,.8,.25,1) both; }
+  @keyframes dar-la-vuelta { from { transform: rotate(-130deg) scale(.94); } to { transform: none; } }
+
+  /* ---------- Cuerpo ---------- */
+  main { padding: 56px 22px 72px; }
+  .layout { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 56px; align-items: start; }
+  .aside { display: grid; gap: 30px; }
+  @media (min-width: 901px) and (min-height: 780px) { .aside { position: sticky; top: 24px; } }
+
+  .card { background: #fff; border: 2px solid var(--blue); border-radius: var(--radius); padding: 22px 22px 14px; }
+  .card h2 { margin-bottom: 8px; }
+
+  .ing { list-style: none; margin: 0; padding: 0; }
+  .ing li { display: grid; grid-template-columns: 6.3rem minmax(0, 1fr); gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); align-items: baseline; }
+  .ing li:first-child { border-top: 0; }
+  .amt { font-family: var(--display); font-weight: 700; font-size: 1.05rem; line-height: 1.3; color: var(--blue); }
+  .ing b { font-family: var(--display); font-weight: 700; }
+  .ing .opt { color: var(--muted); font-style: italic; }
+  .ing .what { display: block; font-size: .98rem; line-height: 1.45; color: var(--muted); }
+  .tip { color: var(--muted); font-size: .95rem; line-height: 1.5; }
+  .card .tip { margin: 6px 0 8px; padding-top: 12px; border-top: 1px solid var(--line); }
+
+  .potato h2 { font-size: 1.4rem; margin-bottom: 10px; }
+  .alert { background: var(--yolk-soft); border-radius: var(--radius); padding: 14px 16px; margin: 14px 0; }
+  .alert strong { font-family: var(--display); }
+
+  /* ---------- Pasos ---------- */
+  .method > h2 { font-size: 2rem; margin-bottom: 26px; }
+  .phase { display: flex; align-items: center; gap: 14px; font-size: 1.3rem; font-weight: 800; letter-spacing: -.02em; color: var(--blue); }
+  .phase::after { content: ""; flex: 1; height: 3px; border-radius: 2px; background: var(--yolk); }
+  .steps { list-style: none; margin: 14px 0 44px; padding: 0; }
+  .steps:last-child { margin-bottom: 0; }
+  .step { display: grid; grid-template-columns: 3.4rem minmax(0, 1fr); gap: 0 14px; padding: 20px 0; border-top: 1px solid var(--line); }
+  .step:first-child { border-top: 0; padding-top: 8px; }
+  .n { font-family: var(--display); font-weight: 800; font-size: 2.6rem; line-height: 1; letter-spacing: -.04em; color: var(--blue); }
+  .step h4 { font-size: 1.25rem; font-weight: 700; margin: 2px 0 6px; }
+  .step p { margin: 0 0 8px; max-width: 38rem; }
+  .step strong { background: linear-gradient(transparent 62%, var(--yolk-soft) 62%); }
+  .step .tip { max-width: 38rem; border-left: 4px solid var(--yolk); padding-left: 12px; margin: 10px 0 0; }
+
+  /* ---------- Cierre ---------- */
+  .closing { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; margin-top: 64px; align-items: start; }
+  .stack { display: grid; gap: 22px; }
+  .panel { border-radius: var(--radius); padding: 24px; }
+  .panel-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+  .badge { flex: 0 0 auto; font-family: var(--display); font-weight: 700; font-size: .82rem; line-height: 1; padding: 6px 10px; border-radius: 99px; margin-top: 4px; }
+  .panel.key { background: var(--yolk); }
+  .panel.key .badge { background: var(--ink); color: var(--yolk); }
+  .panel.size { background: #fff; border: 1.5px solid var(--line); }
+  .panel.size .badge { background: #e6ebfb; color: var(--blue-deep); }
+  .panel p:last-child { margin-bottom: 0; }
+  .dots { list-style: none; margin: 0; padding: 0; }
+  .dots li { position: relative; padding: 5px 0 5px 24px; }
+  .dots li::before { content: ""; position: absolute; left: 3px; top: .82em; width: 9px; height: 9px; border-radius: 50%; background: var(--blue); }
+
+  .card-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  output { font-family: var(--display); font-weight: 700; color: var(--blue); }
+  .bar { height: 6px; border-radius: 3px; background: var(--line); margin: 6px 0 8px; overflow: hidden; }
+  .bar i { display: block; height: 100%; width: 0; background: var(--blue); transition: width .25s ease; }
+  .check { display: flex; align-items: flex-start; gap: 12px; padding: 11px 0; border-top: 1px solid var(--line); cursor: pointer; }
+  .check:first-of-type { border-top: 0; }
+  .check input { -webkit-appearance: none; appearance: none; flex: 0 0 auto; display: grid; place-content: center; width: 24px; height: 24px; margin: 2px 0 0; border: 2px solid var(--blue); border-radius: 6px; background: #fff; cursor: pointer; transition: background .15s; }
+  .check input::after { content: ""; width: 6px; height: 11px; margin-top: -2px; border: solid #fff; border-width: 0 3px 3px 0; transform: rotate(45deg) scale(0); transition: transform .15s; }
+  .check input:checked { background: var(--blue); }
+  .check input:checked::after { transform: rotate(45deg) scale(1); }
+  .check input:focus-visible { outline: 3px solid var(--blue-deep); outline-offset: 2px; }
+  .check.done span { color: var(--muted); text-decoration: line-through; text-decoration-color: rgba(85,91,116,.5); }
+
+  footer { color: var(--muted); text-align: center; font-size: .9rem; padding: 0 22px 36px; }
+
+  /* ---------- Adaptación ---------- */
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; gap: 44px; }
+    .closing { grid-template-columns: 1fr; margin-top: 48px; }
+  }
+  @media (max-width: 760px) {
+    .hero .wrap { grid-template-columns: 1fr; gap: 0; }
+    .hero-copy { padding-bottom: 36px; }
+    .plate { justify-self: center; width: min(82vw, 340px); margin-bottom: -56px; }
+    main { padding-top: 40px; }
+    .method > h2 { font-size: 1.7rem; }
+    .step { grid-template-columns: 2.6rem minmax(0, 1fr); gap: 0 10px; }
+    .n { font-size: 2.1rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tortilla { animation: none; }
+    .bar i, .check input, .check input::after { transition: none; }
+  }
+
+  /* ---------- Impresión ---------- */
+  @media print {
+    body { background: #fff; font-size: 11pt; }
+    .hero { background: #fff; color: #000; padding: 0 0 14px; border-bottom: 2px solid #000; }
+    .hero .wrap { display: block; }
+    .hero-copy { padding-bottom: 0; }
+    .plate { display: none; }
+    .kicker, .yield strong { color: #000; }
+    h1 { color: #000; font-size: 34pt; }
+    .lede { color: #333; }
+    .yield { border-color: #999; }
+    main { padding: 16px 0 0; }
+    .layout { grid-template-columns: 1fr; gap: 20px; }
+    .aside { position: static; }
+    .card, .panel, .step { break-inside: avoid; }
+    .panel.key { background: #fff; border: 1.5px solid #999; }
+    .closing { grid-template-columns: 1fr; margin-top: 24px; }
+    .step strong { background: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="kicker">Receta y técnica paso a paso</p>
+      <h1>Tortilla de patatas</h1>
+      <p class="lede">Patata tierna por dentro, bordes ligeramente dorados y una mezcla cremosa de huevo y patata. La clave está en cortar, freír y cuajar con calma.</p>
+      <p class="yield">Ración orientativa para <strong>4 personas</strong>: <strong>600–800 g</strong> de patata y <strong>6–8 huevos</strong>, según tamaño y proporción.</p>
+    </div>
+
+    <svg class="plate" viewBox="0 0 400 400" role="img" aria-label="Tortilla de patatas dorada servida en un plato blanco con borde azul">
+      <defs>
+        <radialGradient id="top" cx=".42" cy=".38" r=".75">
+          <stop offset="0" stop-color="#f9d865"/>
+          <stop offset="1" stop-color="#ebb02d"/>
+        </radialGradient>
+      </defs>
+      <circle cx="209" cy="215" r="196" fill="#14297a" opacity=".45"/>
+      <circle cx="200" cy="200" r="196" fill="#fbfaf4"/>
+      <circle cx="200" cy="200" r="160" fill="none" stroke="#1e3fae" stroke-width="5"/>
+      <circle cx="200" cy="200" r="149" fill="none" stroke="#1e3fae" stroke-width="1.5"/>
+      <g class="tortilla">
+        <circle cx="205" cy="208" r="122" fill="#181b2e" opacity=".16"/>
+        <circle cx="200" cy="200" r="122" fill="#d9941b"/>
+        <circle cx="200" cy="200" r="112" fill="url(#top)"/>
+        <g fill="#fbe79a" opacity=".85">
+          <ellipse cx="150" cy="160" rx="16" ry="9" transform="rotate(-20 150 160)"/>
+          <ellipse cx="205" cy="140" rx="18" ry="9" transform="rotate(15 205 140)"/>
+          <ellipse cx="255" cy="170" rx="14" ry="8" transform="rotate(40 255 170)"/>
+          <ellipse cx="175" cy="215" rx="17" ry="9" transform="rotate(5 175 215)"/>
+          <ellipse cx="230" cy="225" rx="15" ry="9" transform="rotate(-30 230 225)"/>
+          <ellipse cx="140" cy="240" rx="13" ry="8" transform="rotate(25 140 240)"/>
+          <ellipse cx="275" cy="222" rx="12" ry="7" transform="rotate(-10 275 222)"/>
+          <ellipse cx="200" cy="268" rx="16" ry="8" transform="rotate(10 200 268)"/>
+          <ellipse cx="256" cy="268" rx="12" ry="7" transform="rotate(35 256 268)"/>
+          <ellipse cx="165" cy="120" rx="12" ry="7" transform="rotate(-35 165 120)"/>
+          <ellipse cx="228" cy="108" rx="11" ry="6" transform="rotate(20 228 108)"/>
+          <ellipse cx="122" cy="200" rx="11" ry="7" transform="rotate(-5 122 200)"/>
+          <ellipse cx="288" cy="188" rx="10" ry="6" transform="rotate(30 288 188)"/>
+          <ellipse cx="190" cy="178" rx="10" ry="6"/>
+        </g>
+        <g fill="#b97a18" opacity=".55">
+          <circle cx="170" cy="190" r="4"/>
+          <circle cx="235" cy="195" r="3.5"/>
+          <circle cx="212" cy="250" r="4"/>
+          <circle cx="152" cy="205" r="3"/>
+          <circle cx="262" cy="245" r="3.5"/>
+          <circle cx="198" cy="118" r="3"/>
+          <circle cx="248" cy="140" r="3"/>
+          <circle cx="132" cy="170" r="3.5"/>
+          <circle cx="182" cy="258" r="3"/>
+        </g>
+        <path d="M118 150 A100 100 0 0 1 190 98" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="6" stroke-linecap="round"/>
+      </g>
+    </svg>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="layout">
+
+      <div class="aside">
+        <section class="card" aria-labelledby="h-ingredientes">
+          <h2 id="h-ingredientes">Ingredientes</h2>
+          <ul class="ing">
+            <li><span class="amt">600–800 g</span><span><b>Patatas</b><span class="what">de variedad Monalisa, Agria o Kennebec.</span></span></li>
+            <li><span class="amt">6–8</span><span><b>Huevos</b><span class="what">tamaño L (grandes).</span></span></li>
+            <li><span class="amt">1 litro</span><span><b>Aceite</b><span class="what">de oliva suave o de girasol, para freír las patatas.</span></span></li>
+            <li><span class="amt">Al gusto</span><span><b>Sal</b><span class="what">sal fina de mesa.</span></span></li>
+            <li><span class="amt">1</span><span><b>Cebolla mediana</b> <span class="opt">(opcional)</span></span></li>
+          </ul>
+          <p class="tip">El litro de aceite es la cantidad disponible para freír; las patatas se escurren después y no se incorpora todo el aceite a la tortilla.</p>
+        </section>
+
+        <section class="potato" aria-labelledby="h-patata">
+          <h2 id="h-patata">Elegir bien la patata</h2>
+          <p>Busca variedades como <strong>Monalisa, Agria o Kennebec</strong>.</p>
+          <div class="alert"><strong>Importante:</strong> evita las patatas viejas, arrugadas o con brotes. Elige patatas firmes y en buen estado.</div>
+          <p class="tip">Córtalas en trozos o láminas de tamaño algo irregular para que el resultado tenga distintas texturas.</p>
+        </section>
+      </div>
+
+      <section class="method" aria-labelledby="h-preparacion">
+        <h2 id="h-preparacion">Preparación, paso a paso</h2>
+
+        <h3 class="phase">La patata</h3>
+        <ol class="steps">
+          <li class="step">
+            <span class="n" aria-hidden="true">1</span>
+            <div><h4>Corta la patata</h4><p>Córtala de forma ligeramente irregular. No hace falta que todas las piezas tengan exactamente el mismo tamaño.</p></div>
+          </li>
+          <li class="step">
+            <span class="n" aria-hidden="true">2</span>
+            <div><h4>Fríe a fuego lento</h4><p>Empieza con el aceite a fuego bajo durante <strong>10–15 minutos</strong>, para que la patata se cocine y se ablande sin dorarse demasiado rápido.</p></div>
+          </li>
+          <li class="step">
+            <span class="n" aria-hidden="true">3</span>
+            <div><h4>Sube el fuego al final</h4><p>Termina con el fuego fuerte durante unos minutos, hasta que algunas zonas estén ligeramente doradas. Vigila para que no se quemen.</p></div>
+          </li>
+          <li class="step">
+            <span class="n" aria-hidden="true">4</span>
+            <div><h4>Escurre y guarda el aceite</h4><p>Vierte las patatas en un colador sobre un recipiente resistente al calor. Deja escurrir bien y recoge el aceite en un bol para poder reutilizarlo en otra tortilla, si sigue limpio y en buen estado.</p></div>
+          </li>
+        </ol>
+
+        <h3 class="phase">Huevo y mezcla</h3>
+        <ol class="steps">
+          <li class="step">
+            <span class="n" aria-hidden="true">5</span>
+            <div><h4>Bate el huevo ligeramente</h4><p>Bate los huevos lo justo para unir claras y yemas: <strong>no busques incorporar aire</strong>. Añade una pizca de sal.</p></div>
+          </li>
+          <li class="step">
+            <span class="n" aria-hidden="true">6</span>
+            <div><h4>Mezcla y deja reposar si quieres</h4><p>Combina el huevo con la patata escurrida en un bol. Si dejas reposar la mezcla unos minutos, la patata absorberá parte del huevo y la textura puede quedar más cremosa.</p></div>
+          </li>
+        </ol>
+
+        <h3 class="phase">Cuajar y dar la vuelta</h3>
+        <ol class="steps">
+          <li class="step">
+            <span class="n" aria-hidden="true">7</span>
+            <div><h4>Cuaja en una sartén limpia</h4><p>Limpia la sartén y ponla a <strong>fuego medio</strong>. Cuando esté caliente, vierte toda la mezcla. Da un pequeño meneo a la sartén por el centro para ayudar a que la tortilla se asiente y cuaje de manera uniforme.</p></div>
+          </li>
+          <li class="step">
+            <span class="n" aria-hidden="true">8</span>
+            <div><h4>Da la vuelta con una tapa</h4><p>Cuando la base esté cuajada, coloca una tapa plana sobre la sartén, sujétala firmemente y gira con decisión. Desliza la tortilla de nuevo en la sartén para cocinar el otro lado.</p><p class="tip">Hazlo sobre una superficie despejada y con cuidado: la sartén y el aceite estarán calientes.</p></div>
+          </li>
+        </ol>
+      </section>
+    </div>
+
+    <div class="closing">
+      <div class="stack">
+        <section class="panel key" aria-labelledby="h-cremosa">
+          <div class="panel-head"><h2 id="h-cremosa">Una tortilla más cremosa</h2><span class="badge">Punto clave</span></div>
+          <ul class="dots">
+            <li>Patata bien cocinada y escurrida.</li>
+            <li>Huevo batido con suavidad, sin añadir aire.</li>
+            <li>Reposo breve de la mezcla antes de cuajar.</li>
+            <li>Fuego medio al cuajar, controlando el tiempo según el punto deseado.</li>
+          </ul>
+        </section>
+
+        <section class="panel size" aria-labelledby="h-tamano">
+          <div class="panel-head"><h2 id="h-tamano">Mejor no hacerla demasiado grande</h2><span class="badge">Consejo práctico</span></div>
+          <p>Una tortilla muy grande es más difícil de cuajar de forma uniforme y de darle la vuelta con seguridad. Si estás empezando, prepara una de tamaño mediano o divide la mezcla en dos.</p>
+        </section>
+      </div>
+
+      <section class="card" aria-labelledby="h-control">
+        <div class="card-head"><h2 id="h-control">Lista de control</h2><output id="count" aria-live="polite">0 de 7</output></div>
+        <div class="bar" aria-hidden="true"><i id="bar"></i></div>
+        <label class="check"><input type="checkbox"><span>Patatas firmes, sin arrugas ni brotes.</span></label>
+        <label class="check"><input type="checkbox"><span>Corte ligeramente irregular.</span></label>
+        <label class="check"><input type="checkbox"><span>10–15 minutos a fuego lento y dorado final a fuego fuerte.</span></label>
+        <label class="check"><input type="checkbox"><span>Aceite escurrido y reservado con cuidado.</span></label>
+        <label class="check"><input type="checkbox"><span>Huevo batido ligeramente y mezcla bien integrada.</span></label>
+        <label class="check"><input type="checkbox"><span>Sartén limpia, caliente y a fuego medio antes de verter la mezcla.</span></label>
+        <label class="check"><input type="checkbox"><span>Tapa preparada para dar la vuelta con seguridad.</span></label>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer>Receta de referencia. Ajusta el punto de cuajado y la sal a tu gusto.</footer>
+
+<script>
+  (function () {
+    var boxes = Array.prototype.slice.call(document.querySelectorAll('.check input'));
+    var count = document.getElementById('count');
+    var bar = document.getElementById('bar');
+    function update() {
+      var done = 0;
+      boxes.forEach(function (box) {
+        if (box.checked) done++;
+        box.parentNode.classList.toggle('done', box.checked);
+      });
+      count.textContent = done + ' de ' + boxes.length;
+      bar.style.width = (done / boxes.length * 100) + '%';
+    }
+    boxes.forEach(function (box) { box.addEventListener('change', update); });
+    update();
+  })();
+</script>
+</body>
+</html>

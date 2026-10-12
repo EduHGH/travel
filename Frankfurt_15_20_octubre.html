@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Frankfurt, del 15 al 20 de octubre</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;
+--paper:#F3F6FC;--paper-top:#E6EFFD;--paper-raised:#FFFFFF;--paper-alt:#E8EEF9;
+--ink:#1B1F2A;--ink-soft:#4A5163;--ink-faint:#5A6176;
+--line:rgba(27,31,42,.12);--line-strong:rgba(27,31,42,.24);--line-card:rgba(20,40,90,.08);
+--accent:#0B66D6;--ok:#0F7A3A;--family:#B3261E;--amber:#8A5A00;--pur:#8E2DA8;--hot:#B3261E;--lift:0%;
+--accent-soft:color-mix(in srgb,var(--accent) 10%,var(--paper-raised));
+--accent-line:color-mix(in srgb,var(--accent) 36%,var(--paper-raised));
+--accent-text:color-mix(in srgb,var(--accent),#fff var(--lift));
+--shadow-1:0 1px 2px rgba(20,40,90,.06),0 10px 28px rgba(20,40,90,.07);
+--f-display:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+--f-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+--r-sm:12px;--r-md:20px;--r-lg:28px;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+--paper:#0F1420;--paper-top:#16203A;--paper-raised:#171D2C;--paper-alt:#1F2840;
+--ink:#E7EBF5;--ink-soft:#B0B8CC;--ink-faint:#8D95AC;
+--line:rgba(231,235,245,.14);--line-strong:rgba(231,235,245,.28);--line-card:rgba(231,235,245,.10);
+--ok:#4CC27F;--family:#FF8A80;--amber:#E0B25A;--pur:#C77BE0;--lift:45%;
+--shadow-1:0 1px 2px rgba(0,0,0,.45),0 10px 28px rgba(0,0,0,.35);color-scheme:dark}}
+:root[data-theme="dark"]{
+--paper:#0F1420;--paper-top:#16203A;--paper-raised:#171D2C;--paper-alt:#1F2840;
+--ink:#E7EBF5;--ink-soft:#B0B8CC;--ink-faint:#8D95AC;
+--line:rgba(231,235,245,.14);--line-strong:rgba(231,235,245,.28);--line-card:rgba(231,235,245,.10);
+--ok:#4CC27F;--family:#FF8A80;--amber:#E0B25A;--pur:#C77BE0;--lift:45%;
+--shadow-1:0 1px 2px rgba(0,0,0,.45),0 10px 28px rgba(0,0,0,.35);color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:84px}
+body{margin:0;background:linear-gradient(180deg,var(--paper-top) 0,var(--paper) 420px) fixed,var(--paper);color:var(--ink);font:15px/1.7 var(--f-body)}
+::selection{background:var(--accent-soft)}
+button{font:inherit;color:inherit}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:960px;margin:0 auto;padding:0 clamp(16px,4vw,32px) 80px}
+header .wrap{padding-top:36px;padding-bottom:0}
+.plx{position:fixed;inset:-20vh 0;z-index:-1;pointer-events:none;overflow:hidden}
+.plx i{position:absolute;border-radius:50%;filter:blur(60px);opacity:.8;background:radial-gradient(circle,color-mix(in srgb,var(--accent) 44%,transparent),transparent 70%)}
+.plx i:nth-child(1){width:46vmax;height:46vmax;left:-14vmax;top:4vh}
+.plx i:nth-child(2){width:38vmax;height:38vmax;right:-12vmax;top:60vh;background:radial-gradient(circle,color-mix(in srgb,var(--pur) 38%,transparent),transparent 70%)}
+.plx i:nth-child(3){width:30vmax;height:30vmax;left:30vw;top:120vh}
+main{position:relative;z-index:1}
+.eyebrow{font:600 12px var(--f-body);letter-spacing:.07em;text-transform:uppercase;color:var(--accent-text);margin:0 0 10px;display:flex;align-items:center;gap:10px}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
+h1{font:600 clamp(30px,5.6vw,46px)/1.08 var(--f-display);letter-spacing:-.025em;margin:0 0 14px;text-wrap:balance}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent-text) 10%,var(--pur));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{margin:0;color:var(--ink-soft);font-size:16px;line-height:1.7;max-width:62ch}
+.meta-row{display:flex;flex-wrap:wrap;gap:20px 28px;margin-top:22px;font:600 12px var(--f-body);letter-spacing:.07em;text-transform:uppercase;color:var(--ink-faint)}
+.meta-row strong{display:block;color:var(--ink);font:500 14.5px var(--f-display);letter-spacing:0;text-transform:none;margin-top:3px}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--paper) 82%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-block:10px;margin-block:24px 4px;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center}
+.nav-btn{flex:none;width:36px;height:36px;display:inline-grid;place-items:center;padding:0;border:1px solid var(--line-strong);border-radius:50%;background:var(--paper-raised);color:var(--ink-soft);cursor:pointer;transition:border-color .15s,color .15s,background .15s}
+.nav-btn:hover,.nav-btn[aria-expanded="true"]{border-color:var(--accent);color:var(--accent-text)}
+.nav-btn[aria-expanded="true"]{background:var(--accent-soft)}
+.nav-btn path{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;transform-box:fill-box;transform-origin:center;transition:transform .18s,opacity .18s}
+.nav-btn[aria-expanded="true"] path:nth-child(1){transform:translateY(4.5px) rotate(45deg)}
+.nav-btn[aria-expanded="true"] path:nth-child(2){opacity:0}
+.nav-btn[aria-expanded="true"] path:nth-child(3){transform:translateY(-4.5px) rotate(-45deg)}
+.seg{position:relative;display:inline-flex;gap:4px;padding:3px;border:1px solid var(--line-strong);border-radius:999px;background:var(--paper-raised);overflow-x:auto;min-width:0;max-width:100%;scrollbar-width:none}
+.seg::-webkit-scrollbar{display:none}
+.seg a{flex:none;padding:6px 14px;border-radius:999px;font:600 13px var(--f-body);color:var(--ink-soft);text-decoration:none;white-space:nowrap}
+.seg a:hover{color:var(--accent-text)}
+.seg a[aria-current]{background:var(--accent);color:#fff;box-shadow:0 6px 16px color-mix(in srgb,var(--accent) 30%,transparent)}
+.btn{font:600 13.5px var(--f-body);background:var(--paper-raised);color:var(--ink-soft);border:1px solid var(--line-strong);border-radius:999px;padding:7px 16px;cursor:pointer;transition:transform .08s}
+.btn:hover{border-color:var(--accent);color:var(--accent-text)}
+.btn:active{transform:scale(.97)}
+.btn.theme{margin-left:auto}
+.toc{position:absolute;top:calc(100% + 8px);left:0;width:min(400px,100%);max-height:calc(100vh - 130px);overflow-y:auto;overscroll-behavior:contain;padding:8px;border:1px solid var(--line-strong);border-radius:var(--r-md);background:var(--paper-raised);box-shadow:var(--shadow-1),0 18px 40px rgba(20,40,90,.14);animation:tocIn .14s ease-out}
+.toc[hidden]{display:none}
+@keyframes tocIn{from{opacity:0;transform:translateY(-6px)}}
+.toc-h{margin:2px 8px 6px;font:600 11.5px var(--f-body);letter-spacing:.07em;text-transform:uppercase;color:var(--ink-faint)}
+.toc a{display:flex;align-items:center;gap:12px;min-height:44px;padding:7px 10px;border-radius:var(--r-sm);color:var(--ink);text-decoration:none;font:500 14.5px/1.3 var(--f-display)}
+.toc a:hover{background:var(--accent-soft)}
+.toc a[aria-current]{background:var(--accent-soft);color:var(--accent-text)}
+.toc .num{width:26px;height:26px;font-size:12px}
+.toc small{display:block;font:italic 400 12.5px/1.3 var(--f-body);color:var(--ink-faint);margin-top:1px}
+section{position:relative;background:var(--paper-raised);border:1px solid var(--line-card);border-radius:var(--r-lg);box-shadow:var(--shadow-1);margin-top:26px;padding:32px 34px 38px;scroll-margin-top:84px}
+h2{font:600 22px/1.2 var(--f-display);letter-spacing:-.025em;margin:0 0 4px;display:flex;align-items:center;gap:12px}
+.num{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;flex:none;font:600 13px var(--f-body);background:var(--accent);color:#fff;letter-spacing:0}
+.sub{color:var(--ink-soft);margin:0 0 22px;font-size:14px;max-width:70ch}
+.day-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:28px;align-items:start}
+.stops{list-style:none;margin:0;padding:0}
+.stop{display:grid;grid-template-columns:7rem 1fr;column-gap:14px;padding:14px 0;border-top:1px solid var(--line)}
+.stop:first-child{border-top:0;padding-top:4px}
+.time{align-self:start;justify-self:start;font:600 11.5px var(--f-body);color:var(--ink-faint);background:var(--paper-alt);border-radius:999px;padding:2px 10px;margin-top:2px;white-space:nowrap}
+.body{display:grid;grid-template-columns:auto 1fr;gap:10px}
+.pin{width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;font:600 12px var(--f-body);display:grid;place-items:center}
+.pin.hot{background:var(--hot)}
+.pin.off{background:transparent;border:1.5px dashed var(--line-strong)}
+.name{font:600 16px/1.35 var(--f-display);letter-spacing:-.01em;padding-top:2px}
+.name a{text-decoration-color:var(--accent-line);text-decoration-thickness:2px;text-underline-offset:3px}
+.name a:hover{color:var(--accent-text)}
+.note{margin:6px 0 0;color:var(--ink-soft);font-size:14px;line-height:1.6}
+.tag{display:inline-flex;align-items:center;gap:7px;margin-top:10px;font:600 12px/1.2 var(--f-body);border:1px solid var(--line-strong);border-radius:999px;padding:4px 12px;background:var(--paper-raised)}
+.tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
+.t-res,.t-sold{--c:var(--family)}.t-rec,.t-ok{--c:var(--ok)}.t-opt,.t-pend{--c:var(--amber)}.t-taq,.t-no{--c:var(--ink-faint)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:3px 13px 3px 4px;border:1px solid var(--line-strong);border-radius:999px;background:var(--paper-raised);text-decoration:none;font-size:14px;line-height:1.4}
+.chip:hover{border-color:var(--accent);color:var(--accent-text)}
+.chip .pin{width:22px;height:22px;font-size:11px}
+.mapbox{position:sticky;top:96px;border:1px solid var(--line-card);background:var(--paper-alt);border-radius:var(--r-md);padding:12px 12px 16px}
+.mapbox svg{display:block;width:100%;height:auto;border-radius:var(--r-sm)}
+.m-bg{fill:var(--paper-raised)}
+.m-river{fill:none;stroke:color-mix(in srgb,var(--accent) 24%,var(--paper-raised));stroke-width:14;stroke-linecap:round;stroke-linejoin:round}
+.m-route{fill:none;stroke:var(--accent-text);stroke-width:2;stroke-dasharray:6 5}
+.m-pin{fill:var(--accent)}.m-pin.hot{fill:var(--hot)}
+.m-n{fill:#fff;font:600 12px var(--f-body);text-anchor:middle;dominant-baseline:central}
+.m-lab{fill:var(--ink-faint);font:italic 13px var(--f-body)}
+.mapcap{margin:10px 4px 0;font-size:13px;line-height:1.55;color:var(--ink-faint)}
+.maplink{display:inline-block;margin-top:6px;font-weight:600;color:var(--accent-text)}
+.box{border:1px solid var(--accent-line);background:var(--accent-soft);border-radius:var(--r-md);padding:18px 22px;margin:24px 0 0;font-size:14.5px;line-height:1.7}
+.stop.trav{border-top:1px dashed var(--line-strong);padding:10px 0}
+.trav .time{background:var(--accent-soft);color:var(--accent-text)}
+.trav .name{font:600 14px/1.4 var(--f-display);color:var(--accent-text)}
+.trav .note{margin-top:2px;font-size:13.5px}
+.tm{display:inline-block;margin-right:8px;font:700 10.5px var(--f-body);letter-spacing:.07em;text-transform:uppercase;background:var(--accent-soft);border:1px solid var(--accent-line);border-radius:999px;padding:1px 8px}
+.golink{font-weight:600;color:var(--accent-text);white-space:nowrap}
+.go{margin-top:12px;padding:6px 0 6px 12px;border-left:3px solid var(--accent-line);font-size:13.5px;line-height:1.55;color:var(--ink-soft);display:grid;gap:2px}
+.go .gh{font:600 11.5px var(--f-body);letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint)}
+.go .gh b{color:var(--accent-text);font-weight:700}
+.golink{font-weight:600;color:var(--accent-text);white-space:nowrap}
+ol.how{list-style:none;counter-reset:h;margin:12px 0 0;padding:0}
+ol.how li{counter-increment:h;position:relative;padding-left:30px;margin-top:16px}
+ol.how li:first-child{margin-top:0}
+ol.how li:before{content:counter(h)".";position:absolute;left:0;top:0;font:600 13px/1.7 var(--f-body);color:var(--accent-text)}
+ol.how li strong{display:block;font:600 15px var(--f-display);letter-spacing:-.01em}
+.tw{overflow-x:auto;margin-top:14px}
+table{border-collapse:collapse;width:100%;min-width:32rem}
+th,td{text-align:left;padding:12px 16px 12px 0;border-top:1px solid var(--line);vertical-align:top}
+th{border-top:0;font:600 11.5px var(--f-body);letter-spacing:.07em;text-transform:uppercase;color:var(--ink-faint)}
+td:first-child{font-weight:600}
+td .tag{margin-top:0}
+footer{margin-top:26px;padding:0 6px;color:var(--ink-faint);font-size:14px}
+footer h2{font-size:15px;margin-bottom:12px;font-family:var(--f-display)}
+footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+footer li a{display:inline-block;border:1px solid var(--line-strong);border-radius:999px;padding:4px 14px;background:var(--paper-raised);color:var(--ink-soft);text-decoration:none;font-size:13.5px}
+footer li a:hover{border-color:var(--accent);color:var(--accent-text)}
+.fotos{margin-top:10px}
+.fotos summary{display:inline-flex;align-items:center;gap:7px;cursor:pointer;list-style:none;font:600 12px/1.2 var(--f-body);color:var(--accent-text);border:1px solid var(--accent-line);background:var(--accent-soft);border-radius:999px;padding:4px 12px}
+.fotos summary::-webkit-details-marker{display:none}
+.fotos summary::before{content:"";width:12px;height:10px;border:1.5px solid currentColor;border-radius:3px;background:linear-gradient(currentColor,currentColor) 2px 5px/4px 2px no-repeat}
+.fotos summary:hover{border-color:var(--accent)}
+.fotos[open] summary::after{content:"· ocultar"}
+.fotos-in{margin-top:10px}
+.fotos-in h4{margin:10px 0 6px;font:600 12.5px var(--f-body);color:var(--ink-soft)}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px}
+.fgrid a{display:block;position:relative;aspect-ratio:4/3;border-radius:var(--r-sm);overflow:hidden;background:var(--paper-alt);border:1px solid var(--line-card)}
+.fgrid img{width:100%;height:100%;object-fit:cover;display:block}
+.fmsg{font-size:13px;color:var(--ink-faint);margin:6px 0}
+.fcred{font-size:11.5px;color:var(--ink-faint);margin:6px 0 0}
+.fmsg a{color:var(--accent-text)}
+@media(max-width:760px){.day-grid{grid-template-columns:1fr}.mapbox{position:static;order:-1}.stop{grid-template-columns:1fr;row-gap:8px}}
+@media(max-width:560px){section{padding:22px 18px 28px}.seg{order:3;flex:1 1 100%}.box{padding:16px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.plx{display:none}}
+@media print{.plx,.bar,.fotos{display:none}section{box-shadow:none}}
+</style>
+</head>
+<body>
+<div class="plx" aria-hidden="true"><i></i><i></i><i></i></div>
+<header><div class="wrap">
+  <p class="eyebrow"><span class="dot"></span>Viaje · Alemania · Octubre 2026</p>
+  <h1>Frankfurt, del 15 al 20 de <em>octubre</em></h1>
+  <p class="lede">Del jueves 15 al martes 20 de octubre de 2026: museos, ciencia, el Taunus y los Grimm. Cada día trae su mapa y lo que conviene reservar.</p>
+  <div class="meta-row"><div>Días<strong>6</strong></div><div>Excursiones<strong>Taunus · Hanau</strong></div><div>Vuelo<strong>Mar 20 · 19:10</strong></div></div>
+</div></header>
+<main class="wrap">
+<div class="bar" role="toolbar" aria-label="Navegación del viaje">
+  <button type="button" class="nav-btn" id="navBtn" aria-label="Menú de secciones" title="Ir a un día" aria-expanded="false" aria-controls="toc"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path d="M3 5.5h14"/><path d="M3 10h14"/><path d="M3 14.5h14"/></svg></button>
+  <nav class="toc" id="toc" aria-label="Secciones" hidden></nav>
+  <div class="seg" id="seg" aria-label="Días del viaje"></div>
+  <button type="button" class="btn theme" id="themeBtn" aria-pressed="false"><span id="themeLbl">Modo oscuro</span></button>
+</div>
+<div id="days"></div>
+
+<section class="guide" id="transporte">
+  <h2><span class="num">T</span>Guía: cómo moverse</h2>
+  <p class="sub">Una sola red, la RMV. Los traslados aparecen como filas propias («Traslado») con su horario, entre una actividad y la siguiente; los horarios de las actividades no los incluyen.</p>
+  <p class="box">El jueves casi todo se hace a pie. El resto de los días salen de la ciudad o cruzan a otras zonas tarifarias (Königstein, Oberursel, el Feldberg, Hanau y Zeppelinheim). Lo más cómodo es comprar en la app RMV el billete (Tageskarte o ida y vuelta) que cubra el recorrido de cada día, o usar un Deutschlandticket si ya lo tienes. Los tiempos son aproximados: confirma horarios en la app, sobre todo el sábado en el Taunus.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Línea</th><th>Para qué</th><th>Día</th></tr></thead>
+    <tbody>
+      <tr><td>S-Bahn (túnel central)</td><td>Hauptbahnhof, Hauptwache, Konstablerwache y Ostendstraße (ECB). La S7 no pasa por Ostendstraße.</td><td>Vie</td></tr>
+      <tr><td>U6 / U7</td><td>Bockenheimer Warte, Hauptwache, Konstablerwache y Westend</td><td>Vie · Lun</td></tr>
+      <tr><td>U1 / U2 / U3 / U8</td><td>Miquel-/Adickesallee, para el Geldmuseum</td><td>Lun</td></tr>
+      <tr><td>RB12</td><td>Frankfurt Hbf a Königstein</td><td>Sáb</td></tr>
+      <tr><td>Bus 57</td><td>Königstein, Gran Feldberg y Oberursel-Hohemark</td><td>Sáb</td></tr>
+      <tr><td>U3</td><td>Hohemark al centro de Frankfurt (vuelta)</td><td>Sáb</td></tr>
+      <tr><td>S8 / S9</td><td>Frankfurt a Hanau Hbf</td><td>Dom</td></tr>
+      <tr><td>S7 + S8 / S9 y Sky Line</td><td>Zeppelinheim, aeropuerto y T1–T3 (Sky Line, gratis)</td><td>Mar</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="guide" id="guia-fra">
+  <h2><span class="num">A</span>Guía: el aeropuerto por libre</h2>
+  <p class="sub">Martes 20, sin visita guiada. Todo gratuito salvo el transporte.</p>
+  <p class="box">Situación a 1 de octubre de 2026: la Terminal 2 está cerrada a pasajeros desde el 9 de junio por reforma y su terraza de visitantes ya no existe. La Terminal 3 abrió el 23 de abril. Tu vuelo de Air Europa sale de la Terminal 3: confírmalo en la tarjeta de embarque.</p>
+  <ol class="how">
+    <li><strong>Mañana: Zeppelinheim (S7)</strong>Antes de ir al aeropuerto, S7 desde el centro hasta Zeppelinheim. Mirador abierto junto al monumento al Puente Aéreo de Berlín, a pie desde la estación por el bosque. Vas con las maletas. Que haya movimiento depende del viento: mira una app de radar de vuelos antes de ir.</li>
+    <li><strong>Llegada al aeropuerto (S7 + S8 o S9)</strong>Desde Zeppelinheim no hay tren directo: S7 hasta Frankfurt Stadion y allí S8 o S9 dirección Mainz/Wiesbaden hasta la estación regional bajo la Terminal 1. Sube a la Halle C, a pocos minutos a pie, y deja el equipaje en consigna.</li>
+    <li><strong>Terminal 1, Halle C</strong>Aquí está el Visitor Center, sin entradas para tu día. Dentro tiene una ventana panorámica sobre las puertas B y C, pero se paga. Recorre las salas de salidas y mira los paneles de vuelos y las pasarelas.</li>
+    <li><strong>Sky Line a la Terminal 3</strong>Tren automático gratuito entre terminales. En la T3 solo accedes a las zonas públicas, sin control de seguridad: una terminal nueva que merece el paseo.</li>
+    <li><strong>Comida</strong>Lo del súper, en un banco de la T1 o la T3. Así no pagas precios de aeropuerto.</li>
+    <li><strong>Facturación en la Terminal 3</strong>Vuelve en Sky Line a la T3 con margen para facturar y pasar seguridad antes de las 19:10. Ten en cuenta que el Open Air Deck está en la T1, en la zona de tránsito, así que desde tu puerta de la T3 no llegarás.</li>
+  </ol>
+  <p class="box">Lleva prismáticos y una chaqueta: las zonas abiertas del aeropuerto corren aire en octubre.</p>
+</section>
+
+<section class="res" id="reservas">
+  <h2><span class="num">R</span>Prioridad de reservas</h2>
+  <div class="tw"><table id="tabla"></table></div>
+</section>
+
+<footer>
+  <h2>Fuentes</h2>
+  <ul>
+    <li><a href="https://frankfurter-goethe-haus.de/en/visit/">Frankfurter Goethe-Haus: visita</a></li>
+    <li><a href="https://www.mfk-frankfurt.de/besuch/">Museum für Kommunikation: planifica tu visita</a></li>
+    <li><a href="https://senckenberg.ticketfritz.de/en/Home/Index">Senckenberg: entradas online</a></li>
+    <li><a href="https://timeride.de/en/frankfurt-location/spooky-vibes-in-old-frankfurt/">TimeRide: Spooky Old Frankfurt</a></li>
+    <li><a href="https://frankfurt-guide.de/en/articles/frankfurt-airport-visitors-terrace-hours-views/">Frankfurt Guide: terraza cerrada y alternativas</a></li>
+  </ul>
+</footer>
+</main>
+<script>
+(function(){
+  var L={pend:'Solicitada: esperando respuesta',res:'Reservar con antelación',ok:'Comprada online',rec:'Comprar online (recomendable)',opt:'Online opcional',taq:'Solo en taquilla',no:'No hace falta reservar',sold:'Sin entradas'};
+  var MAIN=[[8.50,50.1010],[8.54,50.1050],[8.58,50.1040],[8.62,50.1030],[8.64,50.1050],[8.66,50.1065],[8.674,50.1064],[8.683,50.1076],[8.695,50.1064],[8.706,50.1080],[8.72,50.1108],[8.75,50.1135],[8.78,50.1090]];
+  var LUN='Supermercado y comida';
+  /* fila: [hora, nombre, [[lugar, lat, lon, búsqueda en Maps]...], reserva, nota] */
+  var D=[
+  {id:'jue',s:'Jue 15',h:'Jueves 15',t:'Frankfurt centro y museos',c:'Frankfurt',river:1,r:[
+    ['10:00–11:15','Goethe-Haus',[['Goethe-Haus',50.1106,8.6786,'Frankfurter Goethe-Haus, Frankfurt']],'taq','La entrada solo se vende en taquilla; no hay venta online.'],
+    ['11:25–13:00','Römerberg, Neue Altstadt, Dom y Paulskirche',[['Römerberg',50.1104,8.6822],['Neue Altstadt',50.1105,8.6838],['Dom',50.1104,8.6853,'Kaiserdom St. Bartholomäus, Frankfurt'],['Paulskirche',50.1112,8.6807]],0,0,{m:'A pie',d:'~10 min',md:'walking',h:'11:15–11:25',t:'Del Goethe-Haus al Römer: unos 500 m por el casco antiguo.'}],
+    ['13:00–14:00',LUN],
+    ['14:20–15:50','Museum für Kommunikation',[['Museum für Kommunikation',50.1043,8.6722]],'ok','Entrada comprada para el jueves 15 de octubre: 1 adulto, 9 €. El ticket móvil está disponible en la app de GetYourGuide. Dirección: Schaumainkai 53.',{m:'A pie',d:'~20 min',md:'walking',h:'14:00–14:20',t:'Cruza el Main por el Eiserner Steg y sigue por el Schaumainkai hasta el número 53.'}],
+    ['16:00–20:00','Museumsufer, Eiserner Steg y fotografía',[['Eiserner Steg',50.1076,8.6832]],0,0,{m:'A pie',d:'~10 min',md:'walking',h:'15:50–16:00',t:'Paseo por la orilla sur del Main (Museumsufer) hasta el puente peatonal.'}]]},
+  {id:'vie',s:'Vie 16',h:'Viernes 16',t:'Senckenberg, BCE y Westend',c:'Frankfurt',river:1,r:[
+    ['09:30–12:00','Senckenberg Naturmuseum',[['Senckenberg Naturmuseum',50.1177,8.6518]],'ok','Entrada registrada. Número de proceso: 8418967 · Número de ticket: 5510216604. La hora de acceso no aparece en los datos facilitados; comprueba el ticket.',{m:'U-Bahn',d:'~20 min',md:'transit',h:'09:10–09:30',t:'Desde el centro: U4, U6 o U7 hasta Bockenheimer Warte. El museo está en Senckenberganlage 25.',o:'Frankfurt Hauptbahnhof'}],
+    ['12:00–13:00',LUN],
+    ['13:30–15:30','ECB Visitor Centre: On-site Visitor Centre tour · 14:00',[['ECB Visitor Centre',50.1097,8.7042,'Europäische Zentralbank Besucherzentrum, Frankfurt']],'ok','Reserva confirmada para el viernes 16 de octubre de 2026 a las 14:00. Idioma: inglés (EN). Estar en el ECB a las 13:30 para pasar el control de seguridad antes de la visita de las 14:00.',{m:'U-Bahn + S-Bahn',d:'~30 min',md:'transit',h:'13:00–13:30',t:'U6 o U7 desde Bockenheimer Warte hasta Hauptwache o Konstablerwache; allí, S-Bahn (cualquier línea salvo la S7) hasta Ostendstraße y 5 min a pie. También sirven los tranvías 11 y 14. Sal con margen: a las 13:30 hay control de seguridad.'}],
+    ['16:00–18:00','Westend, Palmengarten y Grüneburgpark (opcional)',[['Westend',50.1195,8.6615],['Palmengarten',50.1224,8.6560],['Grüneburgpark',50.1265,8.6620]],0,0,{m:'S-Bahn + U-Bahn',d:'~30 min',md:'transit',h:'15:30–16:00',t:'S-Bahn desde Ostendstraße hasta Hauptwache y U6 o U7 hasta Westend; el Palmengarten queda a pocos minutos a pie.'}]]},
+  {id:'sab',s:'Sáb 17',h:'Sábado 17',t:'Taunus',c:'Taunus',r:[
+    ['09:00','Salida de Frankfurt',[['Frankfurt',50.1109,8.6821,'Frankfurt am Main']]],
+    ['10:00–11:30','Königstein y su castillo',[['Burg Königstein',50.1826,8.4667,'Burg Königstein, Königstein im Taunus']],'no','No hace falta reservar para la ruta.',{m:'Tren regional',d:'~1 h (tren ~40 min + subida a pie)',md:'transit',h:'09:00–10:00',t:'RB12 desde Frankfurt Hbf (vía Höchst) hasta Königstein; el castillo queda a pie desde la estación, cuesta arriba. Mira los horarios del sábado en la app RMV.'}],
+    ['11:30–13:00','Paseo sencillo por el Taunus'],
+    ['13:00–14:00',LUN],
+    ['14:30–16:30','Großer Feldberg y fotografía',[['Großer Feldberg',50.2326,8.4610,'Großer Feldberg, Taunus']],0,0,{m:'Bus 57',d:'~30 min',md:'transit',h:'14:00–14:30',t:'Bus 57 desde Königstein hasta la parada Großer Feldberg. Pasa pocas veces: confirma el horario en la app RMV antes de salir.'}],
+    ['16:30–17:30','Paseo opcional'],
+    ['','',0,0,0,{m:'Bus 57 + U3',d:'~1 h 15',md:'transit',h:'17:30–18:45',t:'Bus 57 hasta Oberursel-Hohemark y U3 hasta el centro (Hauptwache). Alternativa: bus 57 a Königstein y RB12 a Frankfurt Hbf.'}]]},
+  {id:'dom',s:'Dom 18',h:'Domingo 18',t:'Hanau y los hermanos Grimm',c:'Hanau',r:[
+    ['10:30–12:00','Marktplatz, monumento Grimm y Rathaus',[['Marktplatz',50.1333,8.9166]],0,'Los tres puntos están juntos, en la misma plaza.',{m:'S-Bahn S8 o S9',d:'~50 min (tren ~25 min + 25 min a pie)',md:'transit',h:'09:40–10:30',t:'S8 o S9 (dirección Hanau) desde Hauptbahnhof o Hauptwache hasta Hanau Hbf; de allí, bus urbano o unos 25 min a pie hasta el Marktplatz.',o:'Frankfurt Hauptbahnhof'}],
+    ['12:00–13:30',LUN],
+    ['14:10–16:10','Schloss Philippsruhe y GrimmsMärchenReich',[['Schloss Philippsruhe',50.1478,8.9488]],'opt','Conviene comprobar o comprar online la entrada si quieres asegurarla; el paseo exterior no requiere nada.',{m:'Bus o a pie',d:'~40 min a pie',md:'transit',h:'13:30–14:10',t:'Unos 3 km desde el Marktplatz: bus urbano (mira la línea en la app RMV) o paseo por la orilla del Main.'}],
+    ['16:10–17:40','Jardines y Mainufer',[['Schlosspark Philippsruhe',50.1493,8.9490]]],
+    ['','',0,0,0,{m:'Bus + S-Bahn',d:'~50 min',md:'transit',h:'17:40–18:30',t:'Bus urbano o paseo hasta Hanau Hbf y S8 o S9 de vuelta a Frankfurt (~25 min).'}]]},
+  {id:'lun',s:'Lun 19',h:'Lunes 19',t:'Dinero, ciencia y fotografía',c:'Frankfurt',river:1,r:[
+    ['09:00–10:15','Geldmuseum',[['Geldmuseum',50.1250,8.6580,'Geldmuseum der Deutschen Bundesbank, Frankfurt']],'no','Entrada gratuita y visita individual: no hace falta reservar.',{m:'U-Bahn',d:'~20 min',md:'transit',h:'08:40–09:00',t:'Desde el centro: U1, U2, U3 o U8 hasta Miquel-/Adickesallee; el museo está a pocos minutos a pie.',o:'Frankfurt Hauptbahnhof'}],
+    ['10:30–12:30','EXPERIMINTA ScienceCenter',[['EXPERIMINTA ScienceCenter',50.1190,8.6440]],'taq','Entrada: 14 €. Comprar allí y enseñar la Wochenkarte por si hay descuento.',{m:'A pie',d:'~15 min',md:'walking',h:'10:15–10:30',t:'Unos 1,2 km desde el Geldmuseum; comprueba el trazado en Maps.'}],
+    ['12:30–13:30',LUN],
+    ['13:55–14:55','Hauptwache y Zeil',[['Hauptwache',50.1143,8.6797],['Zeil',50.1146,8.6870]],0,0,{m:'U-Bahn',d:'~25 min',md:'transit',h:'13:30–13:55',t:'U6 o U7 desde Bockenheimer Warte (a unos 7 min a pie de EXPERIMINTA) hasta Hauptwache.'}],
+    ['15:10–16:40','Main Tower y skyline',[['Main Tower',50.1128,8.6725]],0,0,{m:'A pie',d:'~15 min',md:'walking',h:'14:55–15:10',t:'Por la Neue Mainzer Straße hasta la torre: algo más de 1 km.'}],
+    ['17:00–18:40','Ruta fotográfica por el Main y Sachsenhausen',[['Sachsenhäuser Ufer',50.1040,8.6810]],0,0,{m:'A pie',d:'~20 min',md:'walking',h:'16:40–17:00',t:'Cruza el Main por el Untermainbrücke y baja a la orilla sur.'}],
+    ['19:00','Spooky Old Frankfurt (TimeRide)',[['TimeRide',50.1108,8.6797,'TimeRide Frankfurt, Berliner Straße 42a, Frankfurt']],'ok','Reserva identificada con el código 2EN-NBAFGJ. Dirección: Berliner Str. 42a, 60311 Frankfurt am Main. Idioma: alemán o inglés, según la reserva. El planning conserva las 19:00 del lunes 19; el mensaje aportado no incluye fecha ni hora, así que verifica esos datos en la confirmación.',{m:'A pie',d:'~15 min',md:'walking',h:'18:40–18:55',t:'Vuelve por el Eiserner Steg hasta el Römer y sigue por la Berliner Straße. Llega con 10 min de margen.'}]]},
+  {id:'mar',s:'Mar 20',h:'Martes 20',t:'Mirador y aeropuerto',c:'Frankfurt Airport',river:1,span:.09,r:[
+    ['08:30–09:15','Súper en Frankfurt',0,0,'Compra aquí la comida del día y lo que quieras llevar: es más barato que en el aeropuerto.'],
+    ['10:05–11:45','Mirador al aire libre de Zeppelinheim, de camino al aeropuerto',[['Zeppelinheim',50.0020,8.6010,'Zeppelinheim S-Bahn, Neu-Isenburg']],0,'S7 desde el Hauptbahnhof (dirección Riedstadt-Goddelau). Mirador gratuito junto al monumento al Puente Aéreo de Berlín, a pie desde la estación por el bosque. Vas con las maletas: la consigna está en el aeropuerto. Que haya movimiento depende del viento; mira una app de radar de vuelos antes de ir.',{m:'A pie + S7 + a pie',d:'~50 min',md:'transit',h:'09:15–10:05',t:'Del súper al Hauptbahnhof (~15 min, según tu alojamiento), S7 hasta Zeppelinheim (~20 min) y unos 15 min a pie por el bosque hasta el mirador.',o:'Frankfurt Hauptbahnhof'}],
+    ['','',0,0,0,{m:'S7 + S8/S9',d:'~35 min',md:'transit',h:'11:45–12:20',t:'Desde Zeppelinheim no hay tren directo: S7 hasta Frankfurt Stadion (~7 min), cambio y S8 o S9 dirección Mainz/Wiesbaden hasta la estación regional bajo la Terminal 1 (~8 min), más esperas.'}],
+    ['12:30–13:30','Terminal 1, Halle C y Fraport Visitors’ Center (solo por fuera)',[['Fraport Visitors’ Center',50.0515,8.5700,'Fraport Visitors Center, Frankfurt Airport']],'sold','No quedan entradas para la visita del 20. Se recorre el vestíbulo por libre: sigue la guía de abajo. Deja las maletas en consigna si no puedes facturar aún.',{m:'A pie',d:'~10 min',md:'walking',h:'12:20–12:30',t:'De la estación regional bajo la Terminal 1 a la Halle C, siguiendo las indicaciones.',x:1}],
+    ['13:40–15:00','Sky Line gratis hasta la Terminal 3 y comida',[['Terminal 3',50.0330,8.5780,'Terminal 3, Frankfurt Airport']],0,'Tren sin conductor y gratuito; la T3 abrió en abril de 2026. Come lo que compraste en el súper.',{m:'Sky Line',d:'~10 min',md:'transit',h:'13:30–13:40',t:'Incluye el acceso a la estación del Sky Line en la T1 y el trayecto en tren (gratuito).'}],
+    ['15:30–17:00','Check-in de Air Europa y control de seguridad (Terminal 3)',0,0,'Air Europa factura en la Terminal 3. Llega a la T3 en Sky Line desde la T1 con margen.'],
+    ['17:00–18:30','Tras seguridad en la Terminal 3 y puerta de embarque'],
+    ['19:10','Vuelo']]}
+  ];
+
+
+  var BAD=/map|karte|plan|logo|diagram|poster|plakat|flag|wappen|coat|schild|sign|screenshot|scan|stadtplan|route|fahrplan/i;
+  function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function photoQ(q){return q.replace(/,/g,' ').replace(/\s+/g,' ').trim();}
+  function loadPhotos(box,places){
+    var out=box.querySelector('.fotos-in');out.innerHTML='<p class="fmsg">Cargando fotos…</p>';
+    var per=places.length>1?3:6;
+    Promise.all(places.map(function(pl){
+      var u='https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrnamespace=6&gsrlimit=25&gsrsearch='+encodeURIComponent(photoQ(pl.q))+'&prop=imageinfo&iiprop=url|mime|size&iiurlwidth=420';
+      return fetch(u).then(function(r){return r.json();}).then(function(j){
+        var pg=j.query?Object.keys(j.query.pages).map(function(k){return j.query.pages[k];}):[];
+        pg.sort(function(a,b){return a.index-b.index;});
+        return pg.filter(function(x){var i=x.imageinfo&&x.imageinfo[0];return i&&i.mime==='image/jpeg'&&i.width>=800&&!BAD.test(x.title);}).slice(0,per);
+      }).catch(function(){return null;});
+    })).then(function(res){
+      var h='';
+      res.forEach(function(r,i){
+        var pl=places[i];
+        if(places.length>1)h+='<h4>'+esc(pl.l)+'</h4>';
+        if(r&&r.length)h+='<div class="fgrid">'+r.map(function(x){var ii=x.imageinfo[0];return '<a href="'+esc(ii.descriptionurl)+'" target="_blank" rel="noopener"><img loading="lazy" src="'+esc(ii.thumburl)+'" alt="'+esc(pl.l)+'"></a>';}).join('')+'</div>';
+        else h+='<p class="fmsg">'+(r===null?'No se pudieron cargar las fotos (sin conexión).':'No hay fotos libres de este sitio.')+' <a href="https://www.google.com/search?tbm=isch&q='+encodeURIComponent(pl.q)+'" target="_blank" rel="noopener">Buscar en Google Imágenes</a></p>';
+      });
+      out.innerHTML=h+'<p class="fcred">Fotos de Wikimedia Commons (licencias libres); pulsa una para ver autoría y licencia.</p>';
+    });
+  }
+  function gs(q){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);}
+  function goHtml(g,pl,st,fl){
+    var dst=pl.length?fl[st]:null,src=st>0?fl[st-1]:null,org=g.o||(src?src.q:''),lk='',fr='';
+    if(dst&&org&&!g.x)lk=' <a class="golink" href="https://www.google.com/maps/dir/?api=1&origin='+encodeURIComponent(org)+'&destination='+encodeURIComponent(dst.q)+'&travelmode='+g.md+'" target="_blank" rel="noopener">Ver ruta</a>';
+    if(dst&&src&&!g.o&&!g.x)fr='Desde el punto '+st+'. ';
+    return '<li class="stop trav"><span class="time">'+g.h+'</span><div class="body"><span class="pin off"></span><div><div class="name"><span class="tm">Traslado</span>'+g.m+' · '+g.d+'</div><p class="note">'+fr+g.t+lk+'</p></div></div></li>';
+  }
+  function hot(t){return t==='res'||t==='pend';}
+
+  function svg(d,fl){
+    var P=46,W=600,H=380,la=fl.map(function(p){return p.a;}),lo=fl.map(function(p){return p.o;});
+    var mnA=Math.min.apply(0,la),mxA=Math.max.apply(0,la),mnO=Math.min.apply(0,lo),mxO=Math.max.apply(0,lo);
+    var cA=(mnA+mxA)/2,cO=(mnO+mxO)/2,k=Math.cos(cA*Math.PI/180),ms=d.span||.008;
+    var dx=Math.max((mxO-mnO)*k,ms*W/H),dy=Math.max(mxA-mnA,ms),sc=Math.min((W-2*P)/dx,(H-2*P)/dy);
+    function X(o){return +(W/2+(o-cO)*k*sc).toFixed(1);}
+    function Y(a){return +(H/2-(a-cA)*sc).toFixed(1);}
+    var s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Esquema del recorrido de '+d.h+'"><rect class="m-bg" width="'+W+'" height="'+H+'"/>';
+    if(d.river){
+      var rp=MAIN.map(function(p){return [X(p[0]),Y(p[1])];});
+      s+='<polyline class="m-river" points="'+rp.map(function(p){return p.join(',');}).join(' ')+'"/>';
+      var lp=rp.filter(function(p){return p[0]>40&&p[0]<W-70&&p[1]>30&&p[1]<H-30;})[0];
+      if(lp)s+='<text class="m-lab" x="'+(lp[0]+10)+'" y="'+(lp[1]-14)+'">Main</text>';
+    }
+    if(fl.length>1)s+='<polyline class="m-route" points="'+fl.map(function(p){return X(p.o)+','+Y(p.a);}).join(' ')+'"/>';
+    fl.forEach(function(p,i){
+      var cx=X(p.o),cy=Y(p.a);
+      s+='<g><title>'+p.l+'</title><circle class="m-pin'+(p.hot?' hot':'')+'" cx="'+cx+'" cy="'+cy+'" r="11"/><text class="m-n" x="'+cx+'" y="'+cy+'">'+(i+1)+'</text></g>';
+    });
+    return s+'</svg>';
+  }
+
+  
+  var FL={};
+  document.getElementById('days').innerHTML=D.map(function(d){
+    var fl=[],n=0;
+    d.r.forEach(function(x){(x[2]||[]).forEach(function(p){fl.push({l:p[0],a:p[1],o:p[2],q:p[3]||p[0]+', '+d.c,hot:hot(x[3])});});});
+    var rows=d.r.map(function(x){
+      var st=n,pl=x[2]||[],pin='<span class="pin off"></span>',name=x[1],chips='';
+      if(pl.length===1){n++;pin='<span class="pin'+(hot(x[3])?' hot':'')+'">'+n+'</span>';name='<a href="'+gs(fl[n-1].q)+'" target="_blank" rel="noopener">'+x[1]+'</a>';}
+      else if(pl.length>1){chips='<div class="chips">'+pl.map(function(){n++;return '<a class="chip" href="'+gs(fl[n-1].q)+'" target="_blank" rel="noopener"><span class="pin">'+n+'</span>'+fl[n-1].l+'</a>';}).join('')+'</div>';}
+      return (x[5]?goHtml(x[5],pl,st,fl):'')+(!x[1]?'':'<li class="stop"><span class="time">'+x[0]+'</span><div class="body">'+pin+'<div><div class="name">'+name+'</div>'+chips+(x[4]?'<p class="note">'+x[4]+'</p>':'')+(x[3]?'<span class="tag t-'+x[3]+'">'+L[x[3]]+'</span>':'')+(pl.length?'<details class="fotos" data-from="'+(n-pl.length)+'" data-to="'+n+'"><summary>Fotos</summary><div class="fotos-in"></div></details>':'')+'</div></div></li>');
+    }).join('');
+    var link=fl.length>1?'https://www.google.com/maps/dir/'+fl.map(function(p){return encodeURIComponent(p.q);}).join('/'):gs(fl[0].q);
+    FL[d.id]=fl;return '<section class="day" id="'+d.id+'"><h2><span class="num">'+d.s.replace(/\D/g,'')+'</span>'+d.h+'</h2><p class="sub">'+d.t+'</p><div class="day-grid"><ol class="stops">'+rows+'</ol><div class="mapbox">'+svg(d,fl)+'<p class="mapcap">Esquema aproximado: cada número es un sitio y sigue el orden del día.<br><a class="maplink" href="'+link+'" target="_blank" rel="noopener">'+(fl.length>1?'Abrir ruta en Google Maps':'Abrir en Google Maps')+'</a></p></div></div></section>';
+  }).join('');
+
+  document.getElementById('days').addEventListener('toggle',function(e){
+    var dt=e.target;if(!dt.classList||!dt.classList.contains('fotos')||!dt.open||dt.dataset.done)return;
+    dt.dataset.done=1;var id=dt.closest('section').id,fl=FL[id].slice(+dt.dataset.from,+dt.dataset.to);
+    loadPhotos(dt,fl);
+  },true);
+
+  var all=[],order=['pend','res','rec','ok','opt','taq','no','sold'];
+  D.forEach(function(d){d.r.forEach(function(x){if(x[3])all.push({n:x[1],h:d.h,r:x[3]});});});
+  all.sort(function(a,b){return order.indexOf(a.r)-order.indexOf(b.r);});
+  document.getElementById('tabla').innerHTML='<thead><tr><th>Lugar</th><th>Día</th><th>Estado</th></tr></thead><tbody>'+all.map(function(a){return '<tr><td>'+a.n+'</td><td>'+a.h+'</td><td><span class="tag t-'+a.r+'">'+L[a.r]+'</span></td></tr>';}).join('')+'</tbody>';
+
+  /* tema claro/oscuro */
+  var root=document.documentElement,btn=document.getElementById('themeBtn'),label=document.getElementById('themeLbl'),mq=window.matchMedia('(prefers-color-scheme: dark)'),saved=null;
+  try{saved=localStorage.getItem('theme');}catch(e){}
+  function eff(){return root.getAttribute('data-theme')||(mq.matches?'dark':'light');}
+  function paint(){var dk=eff()==='dark';label.textContent=dk?'Modo claro':'Modo oscuro';btn.setAttribute('aria-pressed',dk);}
+  if(saved==='dark'||saved==='light')root.setAttribute('data-theme',saved);
+  paint();
+  btn.addEventListener('click',function(){var nx=eff()==='dark'?'light':'dark';root.setAttribute('data-theme',nx);try{localStorage.setItem('theme',nx);}catch(e){}paint();});
+  if(mq.addEventListener)mq.addEventListener('change',function(){if(!root.getAttribute('data-theme'))paint();});
+
+  /* navegación: días en la barra, menú con todas las secciones y seguimiento del scroll */
+  var seg=document.getElementById('seg'),toc=document.getElementById('toc'),nb=document.getElementById('navBtn'),bar=document.querySelector('.bar'),
+      secs=[].slice.call(document.querySelectorAll('main section[id]'));
+  seg.innerHTML=D.map(function(d){return '<a href="#'+d.id+'">'+d.s+'</a>';}).join('')+'<a href="#guia-fra">Aeropuerto</a><a href="#reservas">Reservas</a>';
+  toc.innerHTML='<p class="toc-h">Ir a una sección</p>'+secs.map(function(s){
+    var h=s.querySelector('h2'),sb=s.querySelector('.sub');
+    return '<a href="#'+s.id+'"><span class="num">'+h.querySelector('.num').textContent+'</span><span>'+h.childNodes[1].textContent+(sb?'<small>'+sb.textContent+'</small>':'')+'</span></a>';}).join('');
+  function open(on){toc.hidden=!on;nb.setAttribute('aria-expanded',on);}
+  nb.addEventListener('click',function(){open(toc.hidden);});
+  toc.addEventListener('click',function(e){if(e.target.closest('a'))open(false);});
+  addEventListener('keydown',function(e){if(e.key==='Escape'&&!toc.hidden){open(false);nb.focus();}});
+  addEventListener('pointerdown',function(e){if(!toc.hidden&&!toc.contains(e.target)&&!nb.contains(e.target))open(false);});
+  var links=[].slice.call(document.querySelectorAll('#seg a,#toc a')),tk=0;
+  function spy(){tk=0;var line=bar.offsetHeight+70,c=null;
+    secs.forEach(function(s){if(s.getBoundingClientRect().top<=line)c=s.id;});
+    links.forEach(function(a){if(a.getAttribute('href')==='#'+c)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});
+    var cur=seg.querySelector('[aria-current]');if(cur)seg.scrollLeft=cur.offsetLeft-seg.clientWidth/2+cur.offsetWidth/2;}
+  addEventListener('scroll',function(){if(!tk)tk=requestAnimationFrame(spy);},{passive:true});spy();
+})();
+</script>
+</body>
+</html>
